@@ -39,7 +39,8 @@ struct oddevennode{
 
 };
 
-int * oddeven_sll(struct oddevennode *head){
+int * oddeven_sll(struct oddevennode *head)
+{
 	
 	return NULL;
 }

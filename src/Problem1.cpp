@@ -23,7 +23,25 @@ We Picked this standard problem from Online , as its a very famous one and you w
 Leetcode .
 */
 #include <stdio.h>
-int* sumoftwo(int *nums, int target, int len){
-
-	return NULL;
+int* sumoftwo(int *nums, int target, int len)
+{
+	int i,sum=0,k;
+	int arr[2];
+	if( nums == NULL||len<1)
+		return NULL;
+	for (i = 0; i < len; i++)
+	{
+		for (k = i+1; k < len; k++)
+		{
+			sum = nums[i] + nums[k];
+			if (sum == target)
+			{
+				arr[0] = i;
+				arr[1] = k;
+				break;
+			}
+			sum = 0;
+		}
+	}
+	return arr;
 }
